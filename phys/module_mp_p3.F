@@ -2412,7 +2412,7 @@ END subroutine p3_init
           ab      = 1. + dqsdT*xxlv(i,k)*inv_cp
           epsilon = (qv(i,k)-qvs(i,k)-ssat(i,k))/ab
           epsilon = max(epsilon,-qc(i,k))   ! limit adjustment to available water
-        ! don't adjust upward if subsaturated
+        ! don't' adjust upward if subsaturated
         ! otherwise this could result in positive adjustment
         ! (spurious generation ofcloud water) in subsaturated conditions
           if (ssat(i,k).lt.0.) epsilon = min(0.,epsilon)
@@ -2840,7 +2840,7 @@ END subroutine p3_init
           ! cloud:
              if (qc(i,k).ge.qsmall) then
               ! droplet fall speed
-              ! (use Stokes' formulation (thus use analytic solution)
+              ! (use Stokes' formulation '(thus use analytic solution)
                 Vt_qc(i,k) = acn(i,k)*gamma(4.+bcn+mu_c(i,k))/(lamc(i,k)**bcn*gamma(mu_c(i,k)+4.))
               ! use mass-weighted mean size
                 D_c = (mu_c(i,k)+4.)/lamc(i,k)
@@ -3239,7 +3239,7 @@ END subroutine p3_init
              dum2  = (dum2-nc(i,k)*iSCF(k))*odt*SCF(k)
              dum2  = max(0.,dum2)
              ncnuc = dum2
-           ! don't include mass increase from droplet activation during first time step
+           ! don't include mass increase from 'droplet activation during first time step
            ! since this is already accounted for by saturation adjustment below
              if (it.le.1) then
                 qcnuc = 0.
