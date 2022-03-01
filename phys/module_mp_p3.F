@@ -4816,7 +4816,7 @@ END subroutine p3_init
        endif
 
           !VIS:  visibility due to reduction from all components 1, 2, and 3
-          !      (based on sum of extinction coefficients and Koschmieders's Law)
+          !      (based on sum of extinction coefficients and Koschmiederss Law)
           diag_vis(i,k) = min(maxVIS, 1./(1./diag_vis1(i,k) + 1./diag_vis2(i,k) + 1./diag_vis3(i,k)))
           diag_vis1(i,k)= min(maxVIS, diag_vis1(i,k))
           diag_vis2(i,k)= min(maxVIS, diag_vis2(i,k))
